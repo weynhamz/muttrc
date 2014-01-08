@@ -1,0 +1,17 @@
+# vim: set ft=muttrc
+
+bind index <Right>    sidebar-open
+bind index <Down>     sidebar-next
+bind index <Up>       sidebar-prev
+bind index <PageDown> sidebar-scroll-down
+bind index <PageUp>   sidebar-scroll-up
+
+macro index ,b '<enter-command>toggle sidebar_visible<enter>'
+
+bind pager <Right>    sidebar-open
+bind pager <Down>     sidebar-next
+bind pager <Up>       sidebar-prev
+bind pager <PageDown> sidebar-scroll-down
+bind pager <PageUp>   sidebar-scroll-up
+
+macro pager ,b '<enter-command>toggle sidebar_visible<enter>'

@@ -1,0 +1,17 @@
+# vim: set ft=muttrc
+#
+# Highlight mail that contains git patches
+
+color body brightred    default "^-.*"
+color body brightgreen  default "^[+].*"
+color body brightwhite  default "^diff --git.*"
+color body brightwhite  default "^index [a-f0-9].*"
+color body brightyellow default "^@@.*"
+
+#color body green       default "^\-\-\- .*"
+#color body green       default "^[\+]{3} .*"
+#color body cyan        default "^[\+][^\+]+.*"
+#color body red         default "^\-[^\-]+.*"
+#color body green       default "^diff \-.*"
+#color body green       default "^index [a-f0-9].*"
+#color body brightblue  default "^@@ .*"

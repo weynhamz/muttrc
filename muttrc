@@ -1,0 +1,67 @@
+source ~/.mutt/muttrc.gmail
+source ~/.mutt/muttrc.gmail.account
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set message_cache_clean
+
+set move = no
+set editor = "vim"
+set record = ""
+set include
+set auto_tag = yes
+
+set sort=threads                # default sort messages by thread
+set sort_aux=last-date-received # showing threads with youngest message last
+set sort_browser=reverse-date   # showing mbox list default to newest first
+
+set hide_thread_subject=no
+
+# Status Bar -----------------------------------------
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Header Options -------------------------------------
+ignore *                                # ignore all headers
+unignore subject: date: from: to: cc: message-id: user-agent: # show only these
+unhdr_order *                           # some distros order things by default
+hdr_order subject: date: from: to: cc: message-id: user-agent: # and in this order
+
+# Index View Options ---------------------------------
+set sort_re                                # thread based on regex
+set ascii_chars = yes
+set date_format = "%y-%m-%d"
+set index_format = "%4C %D %-20.20F |%Z| %s"
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+set uncollapse_jump                        # don't collapse on an unread message
+
+# Pager View Options ---------------------------------
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
+set menu_scroll            # scroll in menus
+set pager_stop             # don't go to next message automatically
+set pager_context = 3
+set pager_index_lines = 15
+
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+
+alternative_order text/plain text/html text/enriched image/*
+auto_view text/html test/plain image/*
+
+#charset-hook .* gbk
+#charset-hook !utf-8 gbk
+#charset-hook ^us-ascii$ gbk
+#charset-hook ^iso-8859-1$ gbk
+
+set attach_charset="gbk:utf-8"
+set assumed_charset="gbk:utf-8"
+
+#set ignore_linear_white_space
+
+source ~/.mutt/muttrc.lists
+source ~/.mutt/muttrc.sidebar
+source ~/.mutt/muttrc.bindings-reset
+source ~/.mutt/muttrc.bindings
+source ~/.mutt/muttrc.bindings-sidebar
+source ~/.mutt/muttrc.colors
+source ~/.mutt/muttrc.colors-patch

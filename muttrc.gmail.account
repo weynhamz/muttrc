@@ -1,0 +1,15 @@
+# vim: set ft=muttrc
+
+# SMTP
+set smtp_url  = "smtp://USERNAME@smtp.gmail.com:587/"
+set smtp_pass = "USERPASS"
+
+# IMAP
+set imap_user = "USERMAIL"
+set imap_pass = "USERPASS"
+
+set realname  = "USERNAME"
+set from      = "USERMAIL"
+
+my_hdr Bcc: USERMAIL
+

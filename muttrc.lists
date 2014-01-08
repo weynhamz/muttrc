@@ -1,0 +1,3 @@
+# vim: set ft=muttrc
+
+subscribe git@vger.kernel.org

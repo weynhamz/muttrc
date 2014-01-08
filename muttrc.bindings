@@ -1,0 +1,114 @@
+# vim: set ft=muttrc
+
+###############################################################################
+#
+# Bindings
+#
+###############################################################################
+
+bind index r         reply
+bind pager r         reply
+
+bind index L         list-reply
+bind pager L         list-reply
+
+bind index R         group-reply
+bind pager R         group-reply
+
+bind index <Tab>     sync-mailbox
+bind index <Space>   collapse-thread
+bind index <Return>  display-message
+
+# This is a equivalent operation of Gmail tagging
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro pager C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+
+# This is a equivalent operation of Gmail un-tagging
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+macro pager M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+# View attachments properly.
+bind attach <Return> view-mailcap
+
+###############################################################################
+#
+# Vim Style Bindings
+#
+###############################################################################
+
+bind index       k           previous-undeleted
+bind index       j           next-undeleted
+
+bind index       K           previous-thread
+bind index       J           next-thread
+
+bind index       gg          first-entry
+bind index       G           last-entry
+
+bind index       \CB         previous-page
+bind index       \CF         next-page
+bind index       \CU         half-up
+bind index       \CD         half-down
+
+bind pager       k           previous-line
+bind pager       j           next-line
+
+bind pager       K           previous-undeleted
+bind pager       J           next-undeleted
+
+bind pager       gg          top
+bind pager       G           bottom
+
+bind pager       \CB         previous-page
+bind pager       \CF         next-page
+bind pager       \CU         half-up
+bind pager       \CD         half-down
+
+bind index       :           enter-command
+bind pager       :           enter-command
+bind generic     :           enter-command
+
+bind index       q           quit
+bind pager       q           quit
+bind generic     q           exit
+
+bind index       h           help
+bind pager       h           help
+bind generic     h           help
+
+bind index       /           search
+bind pager       /           search
+bind generic     /           search
+
+bind index       ?           search-reverse
+bind pager       ?           search-reverse
+bind generic     ?           search-reverse
+
+bind index       n           search-next
+bind pager       n           search-next
+bind generic     n           search-next
+
+bind index       N           search-opposite
+bind pager       N           search-opposite
+bind generic     N           search-opposite
+
+###############################################################################
+#
+# Gmail Integration
+#
+###############################################################################
+
+#macro    index,pager    ,gi    "<change-folder>=INBOX<enter>"             "Go to inbox"
+#macro    index,pager    ,gd    "<change-folder>=[Gmail]/Drafts<enter>"    "Go to drafts"
+#macro    index,pager    ,gd    "<change-folder>=[Gmail]/草稿<enter>"      "Go to drafts"
+#macro    index,pager    ,gs    "<change-folder>=[Gmail]/Starred<enter>"   "Go to starred"
+#macro    index,pager    ,gs    "<change-folder>=[Gmail]/已加星标<enter>"  "Go to starred"
+#macro    index,pager    ,ga    "<change-folder>=[Gmail]/All Mail<enter>"  "Go to all mail"
+#macro    index,pager    ,ga    "<change-folder>=[Gmail]/所有邮件<enter>"  "Go to all mail"
+
+macro    index,pager    A      "<enter-command>unset trash\n <delete-thread>"                                                     "Gmail archive thread"
+macro    index,pager    a      "<enter-command>unset trash\n <delete-message>"                                                    "Gmail archive message"
+#macro    index,pager    D      "<enter-command>set   trash=\"imaps://imap.googlemail.com/[Gmail]/Bin\"\n <delete-thread>"         "Gmail delete thread"
+macro    index,pager    D      "<enter-command>set   trash=\"imaps://imap.googlemail.com/[Gmail]/已删除邮件\"\n <delete-thread>"  "Gmail delete thread"
+#macro    index,pager    d      "<enter-command>set   trash=\"imaps://imap.googlemail.com/[Gmail]/Bin\"\n <delete-message>"        "Gmail delete message"
+macro    index,pager    d      "<enter-command>set   trash=\"imaps://imap.googlemail.com/[Gmail]/已删除邮件\"\n <delete-message>" "Gmail delete message"

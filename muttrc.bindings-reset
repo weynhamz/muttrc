@@ -1,0 +1,347 @@
+# vim: set ft=muttrc
+#
+#   index : list the emails of an opened folder, it's the main mode
+#   pager : display a selected e-mail
+#  attach : list the parts of MIME attachments
+# compose : set up a new email to be sent out
+# browser : directory listing when searching for folder to change to
+
+bind index       \CB        noop # M <enter-command> set my_pipe_decode=$pipe_deco...
+bind pager       \CB        noop # M <enter-command> set my_pipe_decode=$pipe_deco...
+
+bind index       \CD        noop # delete-thread
+bind pager       \CD        noop # delete-thread
+
+bind index       \CE        noop # edit-type
+bind pager       \CE        noop # edit-type
+
+bind index       \CF        noop # forget-passphrase
+bind pager       \CF        noop # forget-passphrase
+
+bind index       \CK        noop # extract-keys
+bind pager       \CK        noop # extract-keys
+
+bind pager       \CL        noop # redraw-screen
+bind generic     \CL        noop # refresh
+
+
+bind index       \CN        noop # next-thread
+bind pager       \CN        noop # next-thread
+
+bind index       \CP        noop # previous-thread
+bind pager       \CP        noop # previous-thread
+
+bind index       \CR        noop # read-thread
+bind pager       \CR        noop # read-thread
+
+bind index       \CT        noop # untag-pattern
+bind pager       \CT        noop # untag-pattern
+
+bind index       \CU        noop # undelete-thread
+bind pager       \CU        noop # undelete-thread
+
+bind index       <esc><tab> noop # previous-new-then-unread
+
+bind pager       <esc>/     noop # search-reverse
+bind generic     <esc>/     noop # search-reverse
+
+bind index       <esc>C     noop # decode-copy
+bind pager       <esc>C     noop # decode-copy
+
+bind index       <esc>P     noop # check-traditional-pgp
+bind pager       <esc>P     noop # check-traditional-pgp
+
+bind index       <esc>V     noop # collapse-all
+
+bind index       <esc>b     noop # M <search>~b
+
+bind index       <esc>c     noop # change-folder-readonly
+bind pager       <esc>c     noop # change-folder-readonly
+
+bind index       <esc>d     noop # delete-subthread
+bind pager       <esc>d     noop # delete-subthread
+
+bind index       <esc>e     noop # resend-message
+bind pager       <esc>e     noop # resend-message
+
+bind index       <esc>k     noop # mail-key
+bind pager       <esc>k     noop # mail-key
+
+bind index       <esc>l     noop # show-limit
+
+bind index       <esc>n     noop # next-subthread
+bind pager       <esc>n     noop # next-subthread
+
+bind index       <esc>p     noop # previous-subthread
+bind pager       <esc>p     noop # previous-subthread
+
+bind index       <esc>r     noop # read-subthread
+bind pager       <esc>r     noop # read-subthread
+
+bind index       <esc>s     noop # decode-save
+bind pager       <esc>s     noop # decode-save
+
+bind index       <esc>t     noop # tag-thread
+
+bind index       <esc>u     noop # undelete-subthread
+bind pager       <esc>u     noop # undelete-subthread
+
+bind index       <esc>v     noop # collapse-thread
+
+bind index       <space>    noop # display-message
+bind pager       <space>    noop # next-page
+
+bind pager       !          noop # shell-escape
+bind generic     !          noop # shell-escape
+
+bind index       \#         noop # break-thread
+bind pager       \#         noop # break-thread
+
+bind index       $          noop # sync-mailbox
+bind pager       $          noop # sync-mailbox
+
+bind index       %          noop # toggle-write
+
+bind index       &          noop # link-threads
+bind pager       &          noop # link-threads
+
+bind pager       -          noop # previous-page
+
+bind index       .          noop # buffy-list
+bind pager       .          noop # buffy-list
+
+bind generic     *          noop # last-entry
+
+bind pager       /          noop # search
+bind generic     /          noop # search
+
+bind pager       1          noop # jump
+bind generic     1          noop # jump
+
+bind pager       2          noop # jump
+bind generic     2          noop # jump
+
+bind pager       3          noop # jump
+bind generic     3          noop # jump
+
+bind pager       4          noop # jump
+bind generic     4          noop # jump
+
+bind pager       5          noop # jump
+bind generic     5          noop # jump
+
+bind pager       6          noop # jump
+bind generic     6          noop # jump
+
+bind pager       7          noop # jump
+bind generic     7          noop # jump
+
+bind pager       8          noop # jump
+bind generic     8          noop # jump
+
+bind pager       9          noop # jump
+bind generic     9          noop # jump
+
+#bind pager       :          noop # enter-command
+#bind generic     :          noop # enter-command
+
+bind generic     \;          noop # tag-prefix
+
+bind generic     <          noop # previous-line
+
+bind generic     =          noop # first-entry
+
+bind generic     >          noop # next-line
+
+#bind pager       ?          noop # help
+#bind generic     ?          noop # help
+
+bind index       @          noop # display-address
+bind pager       @          noop # display-address
+
+bind index       C          noop # copy-message
+bind pager       C          noop # copy-message
+
+bind index       D          noop # delete-pattern
+
+bind index       F          noop # flag-message
+bind pager       F          noop # flag-message
+
+bind index       G          noop # fetch-mail
+
+bind generic     H          noop # top-page
+
+bind generic     L          noop # bottom-page
+
+bind index       J          noop # next-entry
+bind pager       J          noop # next-entry
+
+bind index       K          noop # previous-entry
+bind pager       K          noop # previous-entry
+
+bind index       L          noop # list-reply
+bind pager       L          noop # list-reply
+
+bind generic     M          noop # middle-page
+
+bind index       N          noop # toggle-new
+bind pager       N          noop # mark-as-new
+
+bind index       O          noop # sort-reverse
+bind pager       O          noop # sort-reverse
+
+bind index       P          noop # parent-message
+bind pager       P          noop # parent-message
+
+bind index       Q          noop # query
+bind pager       Q          noop # quit
+
+bind index       R          noop # recall-message
+bind pager       R          noop # recall-message
+
+bind pager       S          noop # skip-quoted
+
+bind index       T          noop # tag-pattern
+bind pager       T          noop # toggle-quoted
+
+bind index       U          noop # undelete-pattern
+
+bind index       V          noop # show-version
+bind pager       V          noop # show-version
+
+bind index       W          noop # clear-flag
+bind pager       W          noop # clear-flag
+
+bind generic     Z          noop # previous-page
+
+bind generic     [          noop # half-up
+
+bind generic     ]          noop # half-down
+
+bind pager       \\         noop # search-toggle
+
+bind pager       ^          noop # top
+
+bind index       a          noop # create-alias
+bind pager       a          noop # create-alias
+
+bind index       b          noop # bounce-message
+bind pager       b          noop # bounce-message
+
+bind index       c          noop # change-folder
+bind pager       c          noop # change-folder
+
+bind index       d          noop # delete-message
+bind pager       d          noop # delete-message
+
+bind index       e          noop # edit
+bind pager       e          noop # edit
+
+bind index       f          noop # forward-message
+bind pager       f          noop # forward-message
+
+bind index       g          noop # group-reply
+bind pager       g          noop # group-reply
+
+bind index       h          noop # display-toggle-weed
+bind pager       h          noop # display-toggle-weed
+
+bind pager       i          noop # exit
+
+bind index       j          noop # next-undeleted
+bind pager       j          noop # next-undeleted
+bind generic     j          noop # next-entry
+
+bind index       k          noop # previous-undeleted
+bind pager       k          noop # previous-undeleted
+bind generic     k          noop # previous-entry
+
+bind index       l          noop # limit
+
+bind index       m          noop # mail
+bind pager       m          noop # mail
+
+bind pager       n          noop # search-next
+bind generic     n          noop # search-next
+
+bind index       o          noop # sort-mailbox
+bind pager       o          noop # sort-mailbox
+
+bind index       p          noop # print-message
+bind pager       p          noop # print-message
+
+#bind index       q          noop # quit
+#bind pager       q          noop # quit
+#bind generic     q          noop # exit
+
+bind index       r          noop # reply
+bind pager       r          noop # reply
+
+bind index       s          noop # save-message
+bind pager       s          noop # save-message
+
+bind pager       t          noop # tag-message
+bind generic     t          noop # tag-entry
+
+bind index       u          noop # undelete-message
+bind pager       u          noop # undelete-message
+
+bind index       v          noop # view-attachments
+bind pager       v          noop # view-attachments
+
+bind index       w          noop # set-flag
+bind pager       w          noop # set-flag
+
+bind index       x          noop # exit
+bind pager       x          noop # exit
+
+bind index       y          noop # M <change-folder>?<toggle-mailboxes>
+bind pager       y          noop # M <change-folder>?<toggle-mailboxes>
+
+bind generic     z          noop # next-page
+
+bind index       |          noop # pipe-message
+bind pager       |          noop # pipe-message
+
+bind index       <Down>     noop # next-undeleted
+bind pager       <Down>     noop # next-undeleted
+bind generic     <Down>     noop # next-entry
+
+bind index       <Up>       noop # previous-undeleted
+bind pager       <Up>       noop # previous-undeleted
+bind generic     <Up>       noop # previous-entry
+
+bind pager       <Left>     noop # previous-undeleted
+bind generic     <Left>     noop # previous-page
+
+bind pager       <Right>    noop # next-undeleted
+bind generic     <Right>    noop # next-page
+
+bind pager       <Home>     noop # top
+bind generic     <Home>     noop # first-entry
+
+bind pager       <BackSpace> noop # previous-line
+
+bind pager       <F1>       noop # M <shell-escape> less /usr/share/doc/mutt/manual.txt
+bind generic     <F1>       noop # M <shell-escape> less /usr/share/doc/mutt/manual.txt
+
+bind pager       <PageDown> noop # next-page
+bind generic     <PageDown> noop # next-page
+
+bind pager       <PageUp>   noop # previous-page
+bind generic     <PageUp>   noop # previous-page
+
+bind index       <Enter>    noop # display-message
+bind pager       <Enter>    noop # next-line
+bind generic     <Enter>    noop # select-entry
+
+bind index       <Return>   noop # display-message
+bind pager       <Return>   noop # next-line
+bind generic     <Return>   noop # select-entry
+
+bind pager       <End>      noop # bottom
+bind generic     <End>      noop # last-entry
+
+bind index       <Tab>      noop # next-new-then-unread
+bind pager       <Tab>      noop # next-new-then-unread
+
